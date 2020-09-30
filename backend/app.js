@@ -99,19 +99,17 @@ app.post("/contactCustomer", (req, res) => {
     } else {
       console.log("Email sent !");
     }
-    res.send("Contact");
+  });
+
+  console.log(req.body);
+  let data = req.body;
+  console.log(data);
+  let sql = "INSERT INTO CONTACTCUSTOMER SET ?";
+  let query = db.query(sql, data, (err, result) => {
+    if (err) throw err;
+    res.send(result);
   });
 });
-
-//   console.log(req.body);
-
-//   let sql = "INSERT INTO CONTACTCUSTOMER SET ?";
-//   let query = db.query(sql, post1, (err, result) => {
-//     if (err) throw err;
-//     res.send(result);
-//   });
-// });
-
 app.get("/send", (req, res) => {
   console.log();
 });

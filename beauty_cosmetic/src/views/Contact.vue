@@ -111,7 +111,7 @@ export default {
 
         xhr.setRequestHeader(
           "Content-Type",
-          "application/x-www-form-urlencoded"
+          "application/json"
           // x-www-form-urlencoded
         );
 
