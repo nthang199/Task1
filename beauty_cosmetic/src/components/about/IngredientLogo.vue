@@ -1,6 +1,6 @@
 <template>
   <div
-    class="image"
+    id="image"
     data-aos="slide-up"
     data-aos-delay="200"
     v-on:mouseenter="mouseover"

@@ -184,9 +184,12 @@ export default {
 }
 .feedback-contact {
   margin-top: 100px;
+  background-image: url("http://www.innisfree.com/vn/vi/resources/images/renewal/bg_ingredient_greentea.jpg");
+  background-size: cover;
 }
 .circle {
   width: 100%;
+  height: 300px;
   margin: 20px;
   color: #0c4b3c;
 }

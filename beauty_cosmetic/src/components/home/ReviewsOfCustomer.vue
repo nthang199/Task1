@@ -262,7 +262,7 @@ export default {
 </script>
 
 <style scope>
-.center {
+#reviewOfCustomer .center {
   display: flex;
   justify-content: center;
   align-items: center;

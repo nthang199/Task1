@@ -2,16 +2,11 @@
   <div class="container">
     <nav class="row navbar navbar-expand-sm navbar-dark fixed-top">
       <ul class="navbar-nav">
-        <li
-          class="col-4"
-          v-for="(item, index) in nav"
-          v-bind:key="index"
-          v-on:click="chooseMenu($event, index)"
-        >
+        <li class="col-4" v-for="(item, index) in nav" v-bind:key="index">
           <router-link
             data-aos="slide-left"
             data-aos-delay="200"
-            v-bind:class="activeClass(index)"
+            v-bind:class="activeClass(item.to)"
             v-bind:to="item.to"
             >{{ item.content }}</router-link
           >
@@ -33,6 +28,7 @@ export default {
   name: "Header",
   data() {
     return {
+      localtion: "/",
       navActive: 0,
       nav: [
         { to: "/", content: "Home" },
@@ -42,14 +38,14 @@ export default {
     };
   },
   methods: {
-    activeClass(index) {
+    activeClass(string) {
       return {
-        active: this.navActive == index,
-        nonactive: this.navNonActive != index
+        active: string == this.$route.path,
+        nonactive: string != this.$route.path
       };
     },
     chooseMenu(event, index) {
-      this.navActive = index;
+      console.log(this.$route.path);
     }
   }
 };
