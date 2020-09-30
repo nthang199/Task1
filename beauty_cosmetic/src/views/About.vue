@@ -18,6 +18,7 @@ export default {
     ListIngredients
   }
 };
+
 </script>
 
 <style>
